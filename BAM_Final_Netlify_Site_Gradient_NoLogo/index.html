@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blake Austin Management</title>
+<meta name="description" content="BAM — Blake Austin Management. Talent. Strategy. Growth." />
+<link rel="icon" href="assets/E13483AC-29D4-4AFD-B7DF-87EB43D644D2.png" />
+<style>
+:root{
+  --ink:#0f0f0f; --bg:#fff; --muted:#666;
+  --g1:#FF922B; --g2:#8936FF; --radius:16px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* Nav */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);
+  border-bottom:1px solid #eee;backdrop-filter:saturate(120%) blur(8px)}
+.nav{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo img{height:36px}
+nav a{padding:8px 10px;border-radius:10px;font-weight:600}
+nav a:hover,nav a.active{background:#f3f3f6}
+
+/* HERO (gradient, no logo) */
+.hero{
+  margin:0; padding:72px 24px; border-radius:0;
+  background:linear-gradient(135deg,var(--g1),var(--g2));
+  color:#fff;
+}
+.hero-inner{max-width:900px;margin:0 auto}
+.hero-title{font-size:clamp(30px,7vw,64px);line-height:1.02;margin:0 0 12px}
+.hero-sub{font-size:clamp(14px,2.6vw,18px);margin:0;opacity:.96}
+.btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+
+/* Sections */
+.section{padding:36px 0;border-top:1px solid #f1f1f4}
+h2{font-size:clamp(22px,3.4vw,32px);margin:0 0 8px}
+.muted{color:var(--muted)}
+.grid{display:grid;gap:24px}
+.grid.two{grid-template-columns:repeat(2,1fr)}
+@media (max-width:880px){.grid.two{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #eee;border-radius:14px;padding:18px}
+ul.clean{margin:10px 0 0 18px} ul.clean li{margin:6px 0}
+
+/* Talent */
+.talent-card img{width:100%;height:auto;border-radius:12px}
+.talent-card h3{margin:10px 0 6px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;
+  font-weight:700;border:1px solid #e8e8ee;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+.btn.primary{background:linear-gradient(90deg,var(--g1),var(--g2));color:#fff;border:none;
+  box-shadow:0 8px 22px rgba(137,54,255,.18),0 4px 10px rgba(0,0,0,.06)}
+.btn.primary:hover{transform:translateY(-1px);filter:saturate(1.05)}
+
+/* Footer */
+footer{padding:40px 0;color:#666;text-align:center}
+</style>
+<script>
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a[href^="#"]'); if(!a) return;
+  const id=a.getAttribute('href').slice(1), el=document.getElementById(id);
+  if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}
+});
+</script>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <img src="assets/E13483AC-29D4-4AFD-B7DF-87EB43D644D2.png" alt="BAM logo"/>
+    </div>
+    <nav>
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#talent">Our Talent</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO gradient without logo art -->
+<section id="home" class="hero" aria-label="Intro">
+  <div class="hero-inner">
+    <h1 class="hero-title">TALENT. STRATEGY.<br/>GROWTH.</h1>
+    <p class="hero-sub">We don’t just manage talent — we build brands.</p>
+    <div class="btn-row">
+      <a class="btn primary" href="#talent">Explore Talent</a>
+      <a class="btn primary" href="#contact">Partner With Us</a>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <!-- ABOUT -->
+  <section id="about" class="section" aria-label="About BAM">
+    <div class="grid two">
+      <div class="card">
+        <h2>Who We Are</h2>
+        <p>At Blake Austin Management (BAM), we don’t just manage talent — we build brands. We represent creators, athletes, and innovators shaping culture, offering a talent-first approach backed by strategic insights and creative execution.</p>
+        <p>Our mission is simple: empower our clients to build lasting personal brands that thrive far beyond a single campaign or platform. From securing world-class partnerships to crafting breakthrough content strategies, we help our talent create authentic, sustainable influence.</p>
+        <p>With deep relationships across media, entertainment, and lifestyle brands, BAM bridges the gap between visionary talent and global opportunities. We handle the strategy so our clients can focus on what they do best — creating, inspiring, and leading.</p>
+      </div>
+      <div class="card">
+        <h2>Our Pillars</h2>
+        <ul class="clean">
+          <li><strong>Talent First</strong> — Every decision starts with your long-term growth.</li>
+          <li><strong>Strategy Always</strong> — Data-driven insights meet bold creative vision.</li>
+          <li><strong>Culture Driven</strong> — We partner with talent and brands shaping what’s next.</li>
+        </ul>
+        <h2 style="margin-top:22px">How It Started</h2>
+        <p>Blake Austin Management was born from a simple vision: to create a talent-first agency built on personal relationships, strategic growth, and cultural relevance.</p>
+        <p>Founded by Blake Solnit, BAM began with a handful of creators and athletes who wanted more than representation — they wanted a partner. A partner who could champion their voice, amplify their impact, and help them build lasting personal brands that go beyond social platforms.</p>
+        <p>What started as a boutique approach has evolved into a full-service talent management agency, connecting our roster with global brands, creative opportunities, and next-level collaborations. While BAM has grown, one thing hasn’t changed: our commitment to authentic partnerships and helping talent set trends, not follow them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALENT -->
+  <section id="talent" class="section" aria-label="Our Talent">
+    <h2>Our Talent</h2>
+    <div class="grid two">
+      <article class="card talent-card">
+        <img src="assets/IMG_4844.PNG" alt="Ansley Layne (@SpookyFoodie)" />
+        <h3>Ansley Layne <span class="muted">(@SpookyFoodie)</span></h3>
+        <p>Food & lifestyle creator where ghost stories meet great food. High-impact, personality-driven content with an engaged audience and brand-ready storytelling.</p>
+        <a class="btn primary" href="mailto:talent@blakeaustinmgmt.com?subject=Ansley%20Layne%20Partnership">Request Partnership →</a>
+      </article>
+
+      <article class="card talent-card">
+        <img src="assets/IMG_5200.JPG" alt="Mitchell Saron" />
+        <h3>Mitchell Saron</h3>
+        <p>Team USA fencer & Harvard Economics grad. 2024 Paris Olympian; 2024 Men’s Sabre World Cup (team) Gold. Shares raw, behind-the-scenes training, travel, and high-energy storytelling that inspires the next generation.</p>
+        <div style="margin:8px 0 16px">
+          <a href="https://vman-sea.com/on-the-cover/mitchell-saron-is-your-jock-next-door/?" target="_blank" rel="noopener">VMAN</a> ·
+          <a href="https://www.nbcolympics.com/athletes/mitchell-saron" target="_blank" rel="noopener">NBC Olympics</a> ·
+          <a href="https://www.usafencing.org/page/show/2670184-mitchell-saron" target="_blank" rel="noopener">USA Fencing</a> ·
+          <a href="https://www.teamusa.com/profiles/mitchell-saron" target="_blank" rel="noopener">Team USA</a>
+        </div>
+        <a class="btn primary" href="mailto:talent@blakeaustinmgmt.com?subject=Mitchell%20Saron%20Partnership">Request Partnership →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section" aria-label="Contact">
+    <h2>Contact</h2>
+    <div class="grid two">
+      <div class="card">
+        <h3>Brand Partnerships</h3>
+        <p>For collaborations, campaigns & strategic partnerships.</p>
+        <a class="btn primary" href="mailto:talent@blakeaustinmgmt.com?subject=Brand%20Partnership%20Inquiry">Email: talent@blakeaustinmgmt.com</a>
+      </div>
+      <div class="card">
+        <h3>Talent Submissions</h3>
+        <p>Creators, athletes & innovators — we’d love to hear from you.</p>
+        <a class="btn primary" href="mailto:talent@blakeaustinmgmt.com?subject=Talent%20Submission">Email: talent@blakeaustinmgmt.com</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="container">
+  <small>© Blake Austin Management</small>
+</footer>
+</body>
+</html>

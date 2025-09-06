@@ -1,0 +1,57 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "/"
+logo_url: "/assets/E13483AC-29D4-4AFD-B7DF-87EB43D644D2.png"
+
+collections:
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - file: "content/site.json"
+        label: "Global Settings"
+        name: "globals"
+        fields:
+          - { name: brand_email, label: Contact Email, widget: string, default: "talent@blakeaustinmgmt.com" }
+          - { name: nav, label: Navigation, widget: list, fields: [{name: label, label: Label, widget: string}, {name: href, label: Link, widget: string}] }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/pages/home.json"
+        label: "Homepage"
+        name: "home"
+        fields:
+          - { name: hero_title, label: Hero Title, widget: string, default: "TALENT. STRATEGY. GROWTH." }
+          - { name: hero_subtitle, label: Hero Subtitle, widget: string, default: "We don’t just manage talent — we build brands." }
+      - file: "content/pages/about.md"
+        label: "About"
+        name: "about"
+        fields:
+          - { name: body, label: About Content, widget: markdown }
+      - file: "content/pages/contact.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - { name: body, label: Contact Content, widget: markdown }
+
+  - name: "talent"
+    label: "Talent Profiles"
+    folder: "content/talent"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Talent Name, widget: string }
+      - { name: handle, label: Social Handle (e.g. @SpookyFoodie), widget: string, required: false }
+      - { name: image, label: Headshot, widget: image }
+      - { name: bio, label: Bio, widget: markdown }
+      - { name: press, label: Press Links, widget: list, required: false, fields: [
+          { name: label, label: Label, widget: string },
+          { name: url, label: URL, widget: string }
+        ] }
